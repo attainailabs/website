@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Security Education Academy provides armed and unarmed security services, security patrol, and private security in the Pacific Northwest." />
+    <meta name="keywords" content="Security, Security Patrol, Private Security, Armed Security, Unarmed Security, Bellevue, Washington" />
+    <title>Security Education Academy | Your Safety is Our Priority</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current url and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new url with only a query string and hash fragment,
+      // e.g. http://www.foo.tld/one/two?a=b#c -> http://www.foo.tld/?/one/two&a=b#c
+      // For use with GitHub Pages (or other static hosts) the error 404.html
+      // should be a copy of this file.
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.split('/').slice(1 + pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This will be replaced by the build process -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
