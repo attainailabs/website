@@ -2,23 +2,37 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WKPCTGDB8H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WKPCTGDB8H');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKPCTGDB8H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WKPCTGDB8H');
+    </script>
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
     <title>Attain AI Labs | AI Solutions for Small Business in Seattle & Eastside</title>
-    <meta name="description" content="Practical AI solutions, workflow automation, and custom AI tooling for small businesses in Seattle, Bellevue, Redmond, Kirkland, Sammamish, Issaquah, and Washington state.">
+    <meta name="description" content="Practical AI solutions, workflow automation, and custom AI tools for small businesses in Seattle, Bellevue, Redmond, Kirkland, Sammamish, and WA state.">
     <meta name="keywords" content="AI for small business, AI automation, AI consultancy, Seattle AI agency, Bellevue AI solutions, Redmond, Kirkland, Sammamish, Issaquah, Washington state, WA">
     
+    <!-- Open Graph / Twitter Meta Tags -->
+    <meta property="og:title" content="Attain AI Labs | AI Solutions for Small Business">
+    <meta property="og:description" content="Turn AI into your business superpower. We build tailored, practical AI solutions with a risk-free guarantee.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.attainailabs.com/">
+    <meta property="og:image" content="https://www.attainailabs.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.attainailabs.com/" />
+
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Local SEO Schema Markup -->
     <script type="application/ld+json">
     {
@@ -43,7 +57,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Icons (Lucide) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- Font (Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -55,15 +69,14 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         brand: {
-                            dark: '#0B0F19', // Deep dark blue/black
+                            dark: '#0B0F19',
                             card: '#111625',
-                            accent: '#3B82F6', // Electric Blue
-                            glow: '#06b6d4'    // Cyan glow
+                            accent: '#3B82F6',
+                            glow: '#06b6d4'
                         }
                     },
                     animation: {
                         'blob': 'blob 7s infinite',
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                     },
                     keyframes: {
                         blob: {
@@ -71,10 +84,6 @@
                             '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                             '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -132,279 +141,298 @@
 </head>
 <body class="antialiased overflow-x-hidden">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-[#0B0F19]/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="AttainAILabs_logo.png" alt="Attain AI Labs Logo" class="h-8 w-auto object-contain">
-                <span class="self-center text-xl font-bold whitespace-nowrap text-white tracking-tight">Attain<span class="text-blue-500">AI</span>Labs</span>
-            </a>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-full text-sm px-6 py-2.5 text-center transition-all shadow-[0_0_15px_rgba(37,99,235,0.5)]">
-                    Get Free Audit
-                </a>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none" aria-controls="navbar-sticky" aria-expanded="false" onclick="toggleMenu()">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                    <li><a href="#services" class="block py-2 px-3 text-gray-300 rounded hover:text-white md:p-0 transition-colors">Services</a></li>
-                    <li><a href="#why-choose-us" class="block py-2 px-3 text-gray-300 rounded hover:text-white md:p-0 transition-colors">Why Us</a></li>
-                    <li><a href="#process" class="block py-2 px-3 text-gray-300 rounded hover:text-white md:p-0 transition-colors">Process</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[100] font-medium">Skip to main content</a>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background Glows -->
-        <div class="absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative z-10">
-            <a href="BizCenterWaitlist.html" class="inline-flex justify-center items-center py-2 px-5 mb-7 text-sm text-blue-300 bg-blue-900/30 rounded-full hover:bg-blue-900/50 border border-blue-500/30 transition-all cursor-pointer">
-                <span class="text-sm font-medium">Looking for our AI products for small businesses? Click here</span> 
-            </a>
-            <h1 class="mb-6 text-5xl font-extrabold tracking-tight leading-none text-white md:text-7xl">
-                Turn AI Into Your <br />
-                <span class="text-gradient">Business Superpower</span>
-            </h1>
-            <p class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48">
-                We bridge the gap between complex technology and your daily reality. Automate tasks, cut costs, and unlock revenue with practical AI solutions tailored for small businesses. 
-                <br> You don't pay anything until we have delivered real growth or proven cost savings for your business.
-            </p>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <a href="#contact" class="inline-flex justify-center items-center py-4 px-8 text-base font-semibold text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-800 transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-                    Find out how
-                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-[#0B0F19]/80 backdrop-blur-md" aria-label="Main navigation">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse" aria-label="Attain AI Labs Home">
+                    <img src="AttainAILabs_logo.png" alt="Attain AI Labs Logo" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM0I4MkY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiByeD0iMiIgcnk9IjIiPjwvcmVjdD48cmVjdCB4PSI5IiB5PSI5IiB3aWR0aD0iNiIgaGVpZ2h0PSI2Ij48L3JlY3Q+PGxpbmUgeDE9IjkiIHkxPSIxIiB4Mj0iOSIgeTI9IjQiPjwvbGluZT48bGluZSB4MT0iMTUiIHkxPSIxIiB4Mj0iMTUiIHkyPSI0Ij48L2xpbmU+PGxpbmUgeDE9IjkiIHkxPSIyMCIgeDI9IjkiIHkyPSIyMyI+PC9saW5lPjxsaW5lIHgxPSIxNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMyI+PC9saW5lPjxsaW5lIHgxPSIyMCIgeTE9IjkiIHgyPSIyMyIgeTI9IjkiPjwvbGluZT48bGluZSB4MT0iMjAiIHkxPSIxNSIgeDI9IjIzIiB5Mj0iMTUiPjwvbGluZT48bGluZSB4MT0iMSIgeTE9IjkiIHgyPSI0IiB5Mj0iOSI+PC9saW5lPjxsaW5lIHgxPSIxIiB5MT0iMTUiIHgyPSI0IiB5Mj0iMTUiPjwvbGluZT48L3N2Zz4='">
+                    <span class="self-center text-xl font-bold whitespace-nowrap text-white tracking-tight">Attain<span class="text-blue-500">AI</span>Labs</span>
                 </a>
-                <a href="#services" class="inline-flex justify-center items-center py-4 px-8 text-base font-medium text-center text-white rounded-lg border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-700 transition-all">
-                    View Solutions
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why AI Section (Grid) -->
-    <section id="why-ai" class="py-20 bg-[#0B0F19]">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-            <div class="max-w-screen-md mb-8 lg:mb-16 reveal mx-auto text-center">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Why Small Businesses Need AI Now</h2>
-                <p class="text-gray-400 sm:text-xl">You don't need a massive tech team to compete. You just need the right tools.</p>
-            </div>
-            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-                <!-- Card 1 -->
-                <div class="reveal glass p-8 rounded-2xl">
-                    <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-blue-900/50 text-blue-400">
-                        <i data-lucide="zap" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">Speed & Efficiency</h3>
-                    <p class="text-gray-400">Automate repetitive admin, scheduling, and support tasks. Save 10+ hours a week per employee.</p>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-full text-sm px-6 py-2.5 text-center transition-all shadow-[0_0_15px_rgba(37,99,235,0.5)] min-h-[44px] inline-flex items-center justify-center">
+                        Get Free Audit
+                    </a>
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-11 h-11 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none" aria-controls="navbar-sticky" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+                        <i data-lucide="menu"></i>
+                    </button>
                 </div>
-                <!-- Card 2 -->
-                <div class="reveal glass p-8 rounded-2xl">
-                    <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-purple-900/50 text-purple-400">
-                        <i data-lucide="trending-up" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">Revenue Growth</h3>
-                    <p class="text-gray-400">Use data to find new customers and personalize marketing. Stop guessing and start selling.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="reveal glass p-8 rounded-2xl">
-                    <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-green-900/50 text-green-400">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">Cost Reduction</h3>
-                    <p class="text-gray-400">Do more with your current resources. Scale your output without scaling your overhead expenses.</p>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <li><a href="#services" class="block py-3 px-3 min-h-[44px] text-gray-300 rounded hover:text-white md:p-0 transition-colors flex items-center">Services</a></li>
+                        <li><a href="#why-choose-us" class="block py-3 px-3 min-h-[44px] text-gray-300 rounded hover:text-white md:p-0 transition-colors flex items-center">Why Us</a></li>
+                        <li><a href="#process" class="block py-3 px-3 min-h-[44px] text-gray-300 rounded hover:text-white md:p-0 transition-colors flex items-center">Process</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-[#111625] py-24 relative overflow-hidden">
-        <!-- Decoration -->
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <!-- Background Glows -->
+            <div class="absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
 
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
-            <div class="mx-auto max-w-screen-sm text-center mb-16 reveal">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Our Core Services</h2>
-                <p class="font-light text-gray-400 lg:mb-16 sm:text-xl">Tailored solutions. No generic fluff.</p>
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative z-10">
+                <a href="BizCenterWaitlist.html" class="inline-flex justify-center items-center py-2 px-5 mb-7 text-sm text-white bg-blue-600 rounded-full hover:bg-blue-700 border border-blue-500 transition-all cursor-pointer font-medium shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                    Looking for our AI products for small businesses? Click here
+                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+                <h1 class="mb-6 text-5xl font-extrabold tracking-tight leading-none text-white md:text-7xl">
+                    Turn AI Into Your <br />
+                    <span class="text-gradient">Business Superpower</span>
+                </h1>
+                <p class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48">
+                    We bridge the gap between complex technology and your daily reality. Automate tasks, cut costs, and unlock revenue with practical AI solutions tailored for small businesses.
+                    <br class="hidden md:block mt-2"> <span class="text-white font-medium"></span>
+                </p>
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="inline-flex justify-center items-center py-4 px-8 text-base font-semibold text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-800 transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
+                        Find out how
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <a href="#services" class="inline-flex justify-center items-center py-4 px-8 text-base font-medium text-center text-white rounded-lg border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-700 transition-all">
+                        View Solutions
+                    </a>
+                </div>
             </div>
-            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+        </section>
+
+        <!-- Why AI Section (Grid) -->
+        <section id="why-ai" class="py-20 bg-[#0B0F19]">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                <div class="max-w-screen-md mb-8 lg:mb-16 reveal mx-auto text-center">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Why Small Businesses Need AI Now</h2>
+                    <p class="text-gray-400 sm:text-xl">You don't need a massive tech team to compete. You just need the right tools.</p>
+                </div>
+                <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                    <!-- Card 1 -->
+                    <div class="reveal glass p-8 rounded-2xl">
+                        <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-blue-900/50 text-blue-400">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-white">Speed & Efficiency</h3>
+                        <p class="text-gray-400">Automate repetitive admin, scheduling, and support tasks. Save 10+ hours a week per employee.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="reveal glass p-8 rounded-2xl">
+                        <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-purple-900/50 text-purple-400">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-white">Revenue Growth</h3>
+                        <p class="text-gray-400">Use data to find new customers and personalize marketing. Stop guessing and start selling.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="reveal glass p-8 rounded-2xl">
+                        <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-green-900/50 text-green-400">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-white">Cost Reduction</h3>
+                        <p class="text-gray-400">Do more with your current resources. Scale your output without scaling your overhead expenses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-[#111625] py-24 relative overflow-hidden">
+            <!-- Decoration -->
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
+                <div class="mx-auto max-w-screen-sm text-center mb-16 reveal">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Our Core Services</h2>
+                    <p class="font-light text-gray-400 lg:mb-16 sm:text-xl">Tailored solutions. No generic fluff.</p>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                    
+                    <!-- Service 1 -->
+                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
+                        <div class="p-4 bg-blue-500/10 rounded-xl mr-4">
+                            <i data-lucide="search" class="w-10 h-10 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">AI Audit</h3>
+                            <p class="text-gray-400 mb-0">We analyze your workflows to identify exactly where AI can save you money or time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
+                        <div class="p-4 bg-purple-500/10 rounded-xl mr-4">
+                            <i data-lucide="message-square" class="w-10 h-10 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Consultancy</h3>
+                            <p class="text-gray-400 mb-0">Strategic guidance to help you choose the right tools and avoid expensive mistakes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
+                        <div class="p-4 bg-cyan-500/10 rounded-xl mr-4">
+                            <i data-lucide="settings" class="w-10 h-10 text-cyan-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Implementation</h3>
+                            <p class="text-gray-400 mb-0">We build it for you. From chatbots to complex workflows, we handle it all.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
+                        <div class="p-4 bg-pink-500/10 rounded-xl mr-4">
+                            <i data-lucide="code-2" class="w-10 h-10 text-pink-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Custom Tooling</h3>
+                            <p class="text-gray-400 mb-0">Off-the-shelf not enough? We build bespoke AI solutions and agents designed for your niche.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Attain Section -->
+        <section id="why-choose-us" class="py-24 bg-[#0B0F19] relative overflow-hidden">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
+                <div class="mx-auto max-w-screen-sm text-center mb-16 reveal">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Why Choose Us?</h2>
+                    <p class="font-light text-gray-400 lg:mb-16 sm:text-xl">Experience. Commitment. Results.</p>
+                </div>
+                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                     <!-- Tech Exp -->
+                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
+                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400 shrink-0">
+                            <i data-lucide="monitor-check" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Decades of Tech Experience</h3>
+                            <p class="text-gray-400">We bring deep technical expertise to the table, ensuring robust and scalable solutions.</p>
+                        </div>
+                     </div>
+                     <!-- AI Exp -->
+                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
+                        <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400 shrink-0">
+                            <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Years of AI Experience</h3>
+                            <p class="text-gray-400">We've been working with AI before the hype, understanding practical applications over buzzwords.</p>
+                        </div>
+                     </div>
+                     <!-- Needs -->
+                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
+                         <div class="p-3 bg-pink-500/10 rounded-lg text-pink-400 shrink-0">
+                            <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Committed to You</h3>
+                            <p class="text-gray-400">We are committed to understanding your specific needs. No cookie-cutter solutions.</p>
+                        </div>
+                     </div>
+                     <!-- ROI Guarantee -->
+                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
+                         <div class="p-3 bg-green-500/10 rounded-lg text-green-400 shrink-0">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Risk-Free Guarantee</h3>
+                            <p class="text-gray-400">Don't pay anything if gains are not realized for your business. We stand by our results.</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-24 bg-[#0B0F19]">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-extrabold text-white">How It Works</h2>
+                </div>
                 
-                <!-- Service 1 -->
-                <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                    <div class="p-4 bg-blue-500/10 rounded-xl mr-4">
-                        <i data-lucide="search" class="w-10 h-10 text-blue-400"></i>
+                <div class="grid gap-8 md:grid-cols-4 text-center">
+                    <!-- Step 1 -->
+                    <div class="reveal">
+                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">1</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Discover</h3>
+                        <p class="text-gray-400 text-sm">30-min chat to find your pain points.</p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">AI Audit</h3>
-                        <p class="text-gray-400 mb-0">We analyze your workflows to identify exactly where AI can save you money or time.</p>
+                    <!-- Step 2 -->
+                    <div class="reveal">
+                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">2</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Audit & Plan</h3>
+                        <p class="text-gray-400 text-sm">We identify high-impact wins.</p>
                     </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                    <div class="p-4 bg-purple-500/10 rounded-xl mr-4">
-                        <i data-lucide="message-square" class="w-10 h-10 text-purple-400"></i>
+                    <!-- Step 3 -->
+                    <div class="reveal">
+                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">3</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Build</h3>
+                        <p class="text-gray-400 text-sm">We implement while you keep working.</p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Consultancy</h3>
-                        <p class="text-gray-400 mb-0">Strategic guidance to help you choose the right tools and avoid expensive mistakes.</p>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                    <div class="p-4 bg-cyan-500/10 rounded-xl mr-4">
-                        <i data-lucide="settings" class="w-10 h-10 text-cyan-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Implementation</h3>
-                        <p class="text-gray-400 mb-0">We build it for you. From chatbots to complex workflows, we handle it all.</p>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                    <div class="p-4 bg-pink-500/10 rounded-xl mr-4">
-                        <i data-lucide="code-2" class="w-10 h-10 text-pink-400"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Custom Tooling</h3>
-                        <p class="text-gray-400 mb-0">Off-the-shelf not enough? We build bespoke AI solutions and agents designed for your niche.</p>
+                    <!-- Step 4 -->
+                    <div class="reveal">
+                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">4</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Train</h3>
+                        <p class="text-gray-400 text-sm">We teach your team the ropes.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Attain Section (New) -->
-    <section id="why-choose-us" class="py-24 bg-[#0B0F19] relative overflow-hidden">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
-            <div class="mx-auto max-w-screen-sm text-center mb-16 reveal">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Why Choose Us?</h2>
-                <p class="font-light text-gray-400 lg:mb-16 sm:text-xl">Experience. Commitment. Results.</p>
-            </div>
-            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-                 <!-- Tech Exp -->
-                 <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                    <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400 shrink-0">
-                        <i data-lucide="monitor-check" class="w-8 h-8"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Decades of Tech Experience</h3>
-                        <p class="text-gray-400">We bring deep technical expertise to the table, ensuring robust and scalable solutions.</p>
-                    </div>
-                 </div>
-                 <!-- AI Exp -->
-                 <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                    <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400 shrink-0">
-                        <i data-lucide="brain-circuit" class="w-8 h-8"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Years of AI Experience</h3>
-                        <p class="text-gray-400">We've been working with AI before the hype, understanding practical applications over buzzwords.</p>
-                    </div>
-                 </div>
-                 <!-- Needs -->
-                 <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                     <div class="p-3 bg-pink-500/10 rounded-lg text-pink-400 shrink-0">
-                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Committed to You</h3>
-                        <p class="text-gray-400">We are committed to understanding your specific needs. No cookie-cutter solutions.</p>
-                    </div>
-                 </div>
-                 <!-- ROI Guarantee -->
-                 <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                     <div class="p-3 bg-green-500/10 rounded-lg text-green-400 shrink-0">
-                        <i data-lucide="shield-check" class="w-8 h-8"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Risk-Free Guarantee</h3>
-                        <p class="text-gray-400">Don't pay anything if gains are not realized for your business. We stand by our results.</p>
-                    </div>
-                 </div>
-            </div>
-        </div>
-    </section>
+        <!-- Footer CTA & Contact -->
+        <section id="contact" class="bg-gradient-to-b from-[#0B0F19] to-blue-900/20 py-24 border-t border-white/5">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Ready to future-proof your business?</h2>
+                <p class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 xl:px-48">
+                    Send us a message to get started, or book a call directly below.
+                </p>
 
-    <!-- Process Section -->
-    <section id="process" class="py-24 bg-[#0B0F19]">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl font-extrabold text-white">How It Works</h2>
+                <!-- Tally Form -->
+                <div class="max-w-3xl mx-auto rounded-xl overflow-hidden mb-12">
+                    <iframe data-tally-src="https://tally.so/embed/7R2rNR?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="492" frameborder="0" marginheight="0" marginwidth="0" title="Attain AI Labs interest form"></iframe>
+                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                </div>
+
+                <div class="flex flex-col mt-16 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                    <h3 class="text-2xl font-bold text-white bg-transparent flex items-center justify-center gap-2">
+                        Or Book a Discovery Call
+                        <i data-lucide="calendar" class="w-6 h-6 text-blue-500"></i>
+                    </h3>
+                </div>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget max-w-4xl mx-auto" data-url="https://calendly.com/attainailabs/30min?background_color=1a1a1a&text_color=ffffff&primary_color=3B82F6" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Semantic Footer -->
+    <footer class="bg-[#0B0F19] border-t border-white/10 pt-12 pb-8 px-4">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <!-- Note: Local SEO text has been intentionally removed to prevent hidden text penalties, relying solely on Schema Markup -->
+            <div class="mb-6">
+                <a href="mailto:info@attainAILabs.com" class="text-gray-400 hover:text-white transition-colors flex items-center justify-center gap-2 text-sm font-medium">
+                    <i data-lucide="mail" class="w-4 h-4"></i> info@attainAILabs.com
+                </a>
             </div>
             
-            <div class="grid gap-8 md:grid-cols-4 text-center">
-                <!-- Step 1 -->
-                <div class="reveal">
-                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">1</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Discover</h3>
-                    <p class="text-gray-400 text-sm">30-min chat to find your pain points.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="reveal">
-                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">2</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Audit & Plan</h3>
-                    <p class="text-gray-400 text-sm">We identify high-impact wins.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="reveal">
-                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">3</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Build</h3>
-                    <p class="text-gray-400 text-sm">We implement while you keep working.</p>
-                </div>
-                <!-- Step 4 -->
-                <div class="reveal">
-                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">4</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Train</h3>
-                    <p class="text-gray-400 text-sm">We teach your team the ropes.</p>
-                </div>
+            <div class="text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <span>© 2026 Attain AI Labs. All Rights Reserved.</span>
+                <span class="hidden sm:inline-block text-gray-700">|</span> 
+                <button onclick="togglePrivacy()" class="hover:text-white transition-colors underline min-h-[44px] min-w-[44px] px-3 py-2 flex items-center justify-center">Privacy Policy</button>
             </div>
         </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section id="contact" class="bg-gradient-to-b from-[#0B0F19] to-blue-900/20 py-24 border-t border-white/5">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-            <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Ready to future-proof your business?</h2>
-            <p class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 xl:px-48">
-                Send us a message to get started, or book a call directly below.
-            </p>
-
-            <!-- Contact Form -->
-            <iframe data-tally-src="https://tally.so/embed/7R2rNR?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="492" frameborder="0" marginheight="0" marginwidth="0" title="Attain AI Labs interest form"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-
-            <div class="flex flex-col mt-16 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                <h3 class="text-2xl font-bold text-white bg-transparent flex items-center justify-center gap-2">
-                    Or Book a Discovery Call
-                    <i data-lucide="calendar" class="w-6 h-6 text-blue-500"></i>
-                </h3>
-            </div>
-            <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/attainailabs/30min?background_color=1a1a1a&text_color=ffffff&primary_color=3B82F6" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
-
-            <!-- Local SEO Text -->
-            <div class="mt-12 text-gray-400 text-sm">
-                Proudly serving small businesses in Seattle, Bellevue, Redmond, Kirkland, Sammamish, Issaquah, and throughout Washington State.
-            </div>
-
-            <div class="text-sm text-gray-500 mt-4">
-                © 2026 Attain AI Labs. All Rights Reserved. 
-                <span class="mx-2">|</span> 
-                <button onclick="togglePrivacy()" class="hover:text-white transition-colors underline">Privacy Policy</button>
-            </div>
-        </div>
-    </section>
+    </footer>
 
     <!-- Privacy Policy Modal -->
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -439,13 +467,13 @@
                                 Please review their respective privacy policies for more information on how they handle data.</p>
                                 
                                 <p><strong>4. Contact Us</strong><br>
-                                If you have questions or wish to delete your data, please contact us via the form on this website or email attainailabs@google.com </p>
+                                If you have questions or wish to delete your data, please contact us via the form on this website or email info@attainailabs.com </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-[#0B0F19] px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse border-t border-white/5">
-                    <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm" onclick="togglePrivacy()">
+                    <button type="button" id="close-modal-btn" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm min-h-[44px]" onclick="togglePrivacy()">
                         Close
                     </button>
                 </div>
@@ -455,36 +483,99 @@
 
     <!-- Scripts -->
     <script>
-        // Initialize Icons
-        lucide.createIcons();
+        // Wait for DOM and deferred scripts to load before initializing Lucide icons
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons({
+                    attrs: {
+                        'aria-hidden': 'true'
+                    }
+                });
+            } else {
+                console.error("Lucide icons library failed to load.");
+            }
+        });
 
         // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('navbar-sticky');
+            const button = document.querySelector('[aria-controls="navbar-sticky"]');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
             menu.classList.toggle('hidden');
+            button.setAttribute('aria-expanded', !isExpanded);
         }
 
-        // Privacy Modal Toggle
+        // Privacy Modal Toggle & Focus Trapping
+        let previousFocusElement;
+        
         function togglePrivacy() {
             const modal = document.getElementById('privacy-modal');
-            modal.classList.toggle('hidden');
-        }
-
-        // Scroll Reveal Animation
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
+            const isHidden = modal.classList.contains('hidden');
+            
+            if (isHidden) {
+                // Open modal
+                previousFocusElement = document.activeElement;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scroll
+                
+                // Set focus to the close button inside modal
+                setTimeout(() => {
+                    document.getElementById('close-modal-btn').focus();
+                }, 100);
+            } else {
+                // Close modal
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore background scroll
+                
+                // Restore focus
+                if (previousFocusElement) {
+                    previousFocusElement.focus();
                 }
             }
         }
-        window.addEventListener("scroll", reveal);
-        // Trigger once on load
-        reveal();
+
+        // Trap focus inside modal when open
+        document.getElementById('privacy-modal').addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                togglePrivacy();
+            }
+            if (e.key === 'Tab') {
+                // Prevent tabbing outside of it to trap focus
+                e.preventDefault();
+                document.getElementById('close-modal-btn').focus();
+            }
+        });
+
+        // High-Performance Scroll Reveal Animation using IntersectionObserver
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); // Stop observing once revealed
+                    }
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+            
+            // Fallback for elements immediately in view on load
+            reveals.forEach(reveal => {
+                if (reveal.getBoundingClientRect().top < window.innerHeight) {
+                    reveal.classList.add("active");
+                }
+            });
+        });
     </script>
 </body>
 </html>
