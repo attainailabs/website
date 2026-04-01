@@ -16,4 +16,3 @@ Allow: /
 
 Sitemap: https://www.attainailabs.com/sitemap.xml
 
-This ensures traditional search engines *and* AI tools have express permission to read, learn from, and index your entire site!
