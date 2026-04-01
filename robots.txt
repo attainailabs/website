@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Specifically allow major AI crawlers for visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://www.attainailabs.com/sitemap.xml
+
+This ensures traditional search engines *and* AI tools have express permission to read, learn from, and index your entire site!
