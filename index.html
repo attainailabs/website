@@ -57,63 +57,53 @@
     }
     </script>
     
-    <!-- Tailwind CSS (No installation needed) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="assets/site.css">
     
     <!-- Icons (Lucide) -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
     
-    <!-- Font (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#0B0F19',
-                            card: '#111625',
-                            accent: '#3B82F6',
-                            glow: '#06b6d4'
-                        }
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body { background-color: #0B0F19; color: #E2E8F0; }
-        
-        /* Glassmorphism Utilities */
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .glass:hover {
-            border: 1px solid rgba(59, 130, 246, 0.5);
-            background: rgba(255, 255, 255, 0.05);
+        :root {
+            --navy: #102941;
+            --navy-deep: #0d2238;
+            --green: #2f6f4e;
+            --green-dark: #255a40;
+            --cream: #f7f1e4;
+            --linen: #efe2cb;
+            --sand: #e8dcc8;
+            --ink: #11100e;
+            --muted: #4d463d;
         }
 
-        /* Text Gradient */
+        body {
+            background:
+                radial-gradient(circle at 8% 12%, rgba(239, 226, 203, .75), transparent 34rem),
+                linear-gradient(180deg, #fbf7ed 0%, var(--cream) 54%, #eadcc5 100%);
+            color: var(--ink);
+            font-family: Inter, sans-serif;
+        }
+
+        h1, h2, .font-display {
+            font-family: Lora, serif;
+            letter-spacing: 0;
+        }
+        
+        .glass {
+            background: rgba(255, 252, 244, .74);
+            border: 1px solid rgba(16, 41, 65, .22);
+            box-shadow: 7px 7px 0 var(--navy);
+        }
+        .glass:hover {
+            border-color: rgba(47, 111, 78, .55);
+            transform: translateY(-2px);
+        }
+
         .text-gradient {
-            background: linear-gradient(to right, #60A5FA, #22D3EE);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--green);
         }
 
         /* Scroll Animation Utility */
@@ -127,49 +117,81 @@
             transform: translateY(0);
         }
 
-        /* Custom Scrollbar for Modal */
+        .btn-primary {
+            background: var(--green);
+            color: #fffdf7;
+            border-radius: .45rem;
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--green-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(16, 41, 65, .28);
+            color: var(--navy);
+            border-radius: .45rem;
+            background: rgba(255, 252, 244, .62);
+        }
+
+        .soft-panel {
+            background: linear-gradient(135deg, rgba(239, 226, 203, .9), rgba(250, 246, 236, .72));
+            border: 1px solid rgba(128, 102, 66, .16);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
+        }
+
+        .line-icon svg, svg.line-icon {
+            stroke-width: 1.5;
+        }
+
         .custom-scrollbar::-webkit-scrollbar {
             width: 8px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(16, 41, 65, 0.08);
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(16, 41, 65, 0.24);
             border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(16, 41, 65, 0.36);
         }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
 
     <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-[100] font-medium">Skip to main content</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 btn-primary px-4 py-2 z-[100] font-medium">Skip to main content</a>
 
     <!-- Header -->
     <header>
         <!-- Navbar -->
-        <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-[#0B0F19]/80 backdrop-blur-md" aria-label="Main navigation">
-            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse" aria-label="Attain AI Labs Home">
-                    <img src="AttainAILabs_logo.png" alt="Attain AI Labs Logo" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM0I4MkY2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiByeD0iMiIgcnk9IjIiPjwvcmVjdD48cmVjdCB4PSI5IiB5PSI5IiB3aWR0aD0iNiIgaGVpZ2h0PSI2Ij48L3JlY3Q+PGxpbmUgeDE9IjkiIHkxPSIxIiB4Mj0iOSIgeTI9IjQiPjwvbGluZT48bGluZSB4MT0iMTUiIHkxPSIxIiB4Mj0iMTUiIHkyPSI0Ij48L2xpbmU+PGxpbmUgeDE9IjkiIHkxPSIyMCIgeDI9IjkiIHkyPSIyMyI+PC9saW5lPjxsaW5lIHgxPSIxNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMyI+PC9saW5lPjxsaW5lIHgxPSIyMCIgeTE9IjkiIHgyPSIyMyIgeTI9IjkiPjwvbGluZT48bGluZSB4MT0iMjAiIHkxPSIxNSIgeDI9IjIzIiB5Mj0iMTUiPjwvbGluZT48bGluZSB4MT0iMSIgeTE9IjkiIHgyPSI0IiB5Mj0iOSI+PC9saW5lPjxsaW5lIHgxPSIxIiB5MT0iMTUiIHgyPSI0IiB5Mj0iMTUiPjwvbGluZT48L3N2Zz4='">
-                    <span class="self-center text-xl font-bold whitespace-nowrap text-white tracking-tight">Attain<span class="text-blue-500">AI</span>Labs</span>
+        <nav class="fixed w-full z-50 top-0 start-0 bg-brand-navy text-white shadow-sm" aria-label="Main navigation">
+            <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between px-6 py-3">
+                <a href="#" class="flex items-center gap-2.5" aria-label="Attain AI Labs Home">
+                    <img src="assets/attain-logo-transparent.png" alt="" class="h-9 w-9 object-contain" aria-hidden="true">
+                    <span class="self-center text-xl md:text-2xl font-sans font-semibold tracking-normal whitespace-nowrap">
+                        Attain<span class="text-[#8FCA9F]">AI</span>Labs
+                    </span>
                 </a>
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-full text-sm px-6 py-2.5 text-center transition-all shadow-[0_0_15px_rgba(37,99,235,0.5)] min-h-[44px] inline-flex items-center justify-center">
+                    <a href="#contact" class="btn-primary font-medium text-sm px-5 py-2 text-center min-h-[44px] inline-flex items-center justify-center">
                         Get Free Audit
                     </a>
-                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-11 h-11 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none" aria-controls="navbar-sticky" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-11 h-11 justify-center text-sm text-white/85 rounded-md md:hidden hover:bg-white/10 focus:outline-none" aria-controls="navbar-sticky" aria-expanded="false" aria-haspopup="true" aria-label="Toggle navigation menu" onclick="toggleMenu()">
                         <i data-lucide="menu"></i>
                     </button>
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                        <li><a href="#services" class="block py-3 px-3 min-h-[44px] text-gray-300 rounded hover:text-white md:p-0 transition-colors flex items-center">Services</a></li>
-                        <li><a href="#why-choose-us" class="block py-3 px-3 min-h-[44px] text-gray-300 rounded hover:text-white md:p-0 transition-colors flex items-center">Why Us</a></li>
-                        <li><a href="#process" class="block py-3 px-3 min-h-[44px] text-gray-300 rounded hover:text-white md:p-0 transition-colors flex items-center">Process</a></li>
+                    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0 md:border-0 bg-brand-navy md:bg-transparent rounded-md">
+                        <li><a href="#" class="block py-3 px-3 min-h-[44px] text-white/80 rounded hover:text-white md:p-0 transition-colors flex items-center">Home</a></li>
+                        <li><a href="#services" class="block py-3 px-3 min-h-[44px] text-white/80 rounded hover:text-white md:p-0 transition-colors flex items-center">Services</a></li>
+                        <li><a href="#why-choose-us" class="block py-3 px-3 min-h-[44px] text-white/80 rounded hover:text-white md:p-0 transition-colors flex items-center">Why Us</a></li>
+                        <li><a href="#process" class="block py-3 px-3 min-h-[44px] text-white/80 rounded hover:text-white md:p-0 transition-colors flex items-center">Process</a></li>
+                        <li><a href="#contact" class="block py-3 px-3 min-h-[44px] text-white/80 rounded hover:text-white md:p-0 transition-colors flex items-center">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -178,125 +200,125 @@
 
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-            <!-- Background Glows -->
-            <div class="absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-            <div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-
-            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative z-10">
-                <a href="BizCenterWaitlist.html" class="inline-flex justify-center items-center py-2 px-5 mb-7 text-sm text-white bg-blue-600 rounded-full hover:bg-blue-700 border border-blue-500 transition-all cursor-pointer font-medium shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+        <section class="relative pt-28 pb-14 lg:pt-32 lg:pb-20 overflow-hidden">
+            <div class="py-8 px-6 mx-auto max-w-6xl lg:py-10 relative z-10">
+                <a href="https://attainDesk.com" class="inline-flex justify-center items-center py-2 px-4 mb-7 text-sm text-brand-navy bg-white/65 rounded-md hover:bg-white border border-brand-navy/15 transition-all cursor-pointer font-medium">
                     Looking for our AI products for small businesses? Click here
-                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4 line-icon"></i>
                 </a>
-                <h1 class="mb-6 text-5xl font-extrabold tracking-tight leading-none text-white md:text-7xl">
-                    Turn AI Into Your <br />
-                    <span class="text-gradient">Business Superpower</span>
-                </h1>
-                <p class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 lg:px-48">
-                    We bridge the gap between complex technology and your daily reality. Automate tasks, cut costs, and unlock revenue with practical AI solutions tailored for small businesses.
-                    <br class="hidden md:block mt-2"> <span class="text-white font-medium"></span>
-                </p>
-                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="inline-flex justify-center items-center py-4 px-8 text-base font-semibold text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-800 transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)]">
-                        Find out how
-                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-                    </a>
-                    <a href="#services" class="inline-flex justify-center items-center py-4 px-8 text-base font-medium text-center text-white rounded-lg border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-700 transition-all">
-                        View Solutions
-                    </a>
+                <div class="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+                    <div>
+                        <h1 class="mb-6 text-5xl font-display font-semibold leading-tight text-brand-ink md:text-6xl">
+                            Turn AI Into Your <br />
+                            <span class="text-gradient">Business Superpower</span>
+                        </h1>
+                        <p class="mb-8 max-w-xl text-lg font-normal text-brand-ink/80 lg:text-xl">
+                            We bridge the gap between complex technology and your daily reality. Automate tasks, cut costs, and unlock revenue with practical AI solutions tailored for small businesses.
+                            <br class="hidden md:block mt-2"> <span class="font-medium"></span>
+                        </p>
+                        <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                            <a href="#contact" class="btn-primary inline-flex justify-center items-center py-4 px-7 text-base font-semibold text-center">
+                                Find out how
+                                <i data-lucide="arrow-right" class="ml-2 w-5 h-5 line-icon"></i>
+                            </a>
+                            <a href="#services" class="btn-secondary inline-flex justify-center items-center py-4 px-7 text-base font-semibold text-center">
+                                View Solutions
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="assets/attain-hero-consultation-v3.jpg" alt="A male consultant showing practical AI workflow ideas to small business owners" class="aspect-[16/11] w-full rounded-lg object-cover shadow-[0_24px_60px_rgba(16,41,65,.18)]">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Why AI Section (Grid) -->
-        <section id="why-ai" class="py-20 bg-[#0B0F19]">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <section id="why-ai" class="py-16">
+            <div class="py-8 px-6 mx-auto max-w-6xl sm:py-10">
                 <div class="max-w-screen-md mb-8 lg:mb-16 reveal mx-auto text-center">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Why Small Businesses Need AI Now</h2>
-                    <p class="text-gray-400 sm:text-xl">You don't need a massive tech team to compete. You just need the right tools.</p>
+                    <h2 class="mb-4 text-4xl font-display font-semibold text-brand-ink">Why Small Businesses Need AI Now</h2>
+                    <p class="text-brand-ink/70 sm:text-xl">You don't need a massive tech team to compete. You just need the right tools.</p>
                 </div>
-                <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-7 md:space-y-0">
                     <!-- Card 1 -->
-                    <div class="reveal glass p-8 rounded-2xl">
-                        <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-blue-900/50 text-blue-400">
-                            <i data-lucide="zap" class="w-6 h-6"></i>
+                    <div class="reveal glass p-8 rounded-md text-center transition-all">
+                        <div class="flex justify-center items-center mb-4 mx-auto w-14 h-14 text-brand-ink">
+                            <i data-lucide="gauge" class="w-11 h-11 line-icon"></i>
                         </div>
-                        <h3 class="mb-2 text-xl font-bold text-white">Speed & Efficiency</h3>
-                        <p class="text-gray-400">Automate repetitive admin, scheduling, and support tasks. Save 10+ hours a week per employee.</p>
+                        <h3 class="mb-2 text-xl font-display font-semibold text-brand-ink">Speed & Efficiency</h3>
+                        <p class="text-brand-ink/75">Automate repetitive admin, scheduling, and support tasks. Save 10+ hours a week per employee.</p>
                     </div>
                     <!-- Card 2 -->
-                    <div class="reveal glass p-8 rounded-2xl">
-                        <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-purple-900/50 text-purple-400">
-                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    <div class="reveal glass p-8 rounded-md text-center transition-all">
+                        <div class="flex justify-center items-center mb-4 mx-auto w-14 h-14 text-brand-ink">
+                            <i data-lucide="sprout" class="w-11 h-11 line-icon"></i>
                         </div>
-                        <h3 class="mb-2 text-xl font-bold text-white">Revenue Growth</h3>
-                        <p class="text-gray-400">Use data to find new customers and personalize marketing. Stop guessing and start selling.</p>
+                        <h3 class="mb-2 text-xl font-display font-semibold text-brand-ink">Revenue Growth</h3>
+                        <p class="text-brand-ink/75">Use data to find new customers and personalize marketing. Stop guessing and start selling.</p>
                     </div>
                     <!-- Card 3 -->
-                    <div class="reveal glass p-8 rounded-2xl">
-                        <div class="flex justify-center items-center mb-4 w-12 h-12 rounded-lg bg-green-900/50 text-green-400">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    <div class="reveal glass p-8 rounded-md text-center transition-all">
+                        <div class="flex justify-center items-center mb-4 mx-auto w-14 h-14 text-brand-ink">
+                            <i data-lucide="handshake" class="w-11 h-11 line-icon"></i>
                         </div>
-                        <h3 class="mb-2 text-xl font-bold text-white">Cost Reduction</h3>
-                        <p class="text-gray-400">Do more with your current resources. Scale your output without scaling your overhead expenses.</p>
+                        <h3 class="mb-2 text-xl font-display font-semibold text-brand-ink">Cost Reduction</h3>
+                        <p class="text-brand-ink/75">Do more with your current resources. Scale your output without scaling your overhead expenses.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="bg-[#111625] py-24 relative overflow-hidden">
-            <!-- Decoration -->
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
-
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
+        <section id="services" class="py-20 relative overflow-hidden">
+            <div class="py-8 px-6 mx-auto max-w-6xl relative z-10">
                 <div class="mx-auto max-w-screen-sm text-center mb-16 reveal">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Our Core Services</h2>
-                    <p class="font-light text-gray-400 lg:mb-16 sm:text-xl">Tailored solutions. No generic fluff.</p>
+                    <h2 class="mb-4 text-4xl font-display font-semibold text-brand-ink">Our Core Services</h2>
+                    <p class="font-normal text-brand-ink/70 lg:mb-16 sm:text-xl">Tailored solutions. No generic fluff.</p>
                 </div>
-                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                <div class="grid gap-5 mb-6 lg:mb-12 md:grid-cols-2">
                     
                     <!-- Service 1 -->
-                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                        <div class="p-4 bg-blue-500/10 rounded-xl mr-4">
-                            <i data-lucide="search" class="w-10 h-10 text-blue-400"></i>
+                    <div class="items-center soft-panel rounded-md sm:flex p-7 reveal">
+                        <div class="p-3 text-brand-green mr-4">
+                            <i data-lucide="search" class="w-9 h-9 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">AI Audit</h3>
-                            <p class="text-gray-400 mb-0">We analyze your workflows to identify exactly where AI can save you money or time.</p>
+                            <h3 class="text-2xl font-display font-semibold text-brand-green mb-2">AI Audit</h3>
+                            <p class="text-brand-ink/75 mb-0">We analyze your workflows to identify exactly where AI can save you money or time.</p>
                         </div>
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                        <div class="p-4 bg-purple-500/10 rounded-xl mr-4">
-                            <i data-lucide="message-square" class="w-10 h-10 text-purple-400"></i>
+                    <div class="items-center soft-panel rounded-md sm:flex p-7 reveal">
+                        <div class="p-3 text-brand-green mr-4">
+                            <i data-lucide="message-square" class="w-9 h-9 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Consultancy</h3>
-                            <p class="text-gray-400 mb-0">Strategic guidance to help you choose the right tools and avoid expensive mistakes.</p>
+                            <h3 class="text-2xl font-display font-semibold text-brand-green mb-2">Consultancy</h3>
+                            <p class="text-brand-ink/75 mb-0">Strategic guidance to help you choose the right tools and avoid expensive mistakes.</p>
                         </div>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                        <div class="p-4 bg-cyan-500/10 rounded-xl mr-4">
-                            <i data-lucide="settings" class="w-10 h-10 text-cyan-400"></i>
+                    <div class="items-center soft-panel rounded-md sm:flex p-7 reveal">
+                        <div class="p-3 text-brand-green mr-4">
+                            <i data-lucide="settings" class="w-9 h-9 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Implementation</h3>
-                            <p class="text-gray-400 mb-0">We build it for you. From chatbots to complex workflows, we handle it all.</p>
+                            <h3 class="text-2xl font-display font-semibold text-brand-green mb-2">Implementation</h3>
+                            <p class="text-brand-ink/75 mb-0">We build it for you. From chatbots to complex workflows, we handle it all.</p>
                         </div>
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="items-center glass rounded-2xl sm:flex p-6 reveal">
-                        <div class="p-4 bg-pink-500/10 rounded-xl mr-4">
-                            <i data-lucide="code-2" class="w-10 h-10 text-pink-400"></i>
+                    <div class="items-center soft-panel rounded-md sm:flex p-7 reveal">
+                        <div class="p-3 text-brand-green mr-4">
+                            <i data-lucide="code-2" class="w-9 h-9 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Custom Tooling</h3>
-                            <p class="text-gray-400 mb-0">Off-the-shelf not enough? We build bespoke AI solutions and agents designed for your niche.</p>
+                            <h3 class="text-2xl font-display font-semibold text-brand-green mb-2">Custom Tooling</h3>
+                            <p class="text-brand-ink/75 mb-0">Off-the-shelf not enough? We build bespoke AI solutions and agents designed for your niche.</p>
                         </div>
                     </div>
                 </div>
@@ -304,51 +326,51 @@
         </section>
 
         <!-- Why Choose Attain Section -->
-        <section id="why-choose-us" class="py-24 bg-[#0B0F19] relative overflow-hidden">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6 relative z-10">
+        <section id="why-choose-us" class="py-20 relative overflow-hidden">
+            <div class="py-8 px-6 mx-auto max-w-6xl relative z-10">
                 <div class="mx-auto max-w-screen-sm text-center mb-16 reveal">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Why Choose Us?</h2>
-                    <p class="font-light text-gray-400 lg:mb-16 sm:text-xl">Experience. Commitment. Results.</p>
+                    <h2 class="mb-4 text-4xl font-display font-semibold text-brand-ink">Why Choose Us?</h2>
+                    <p class="font-normal text-brand-ink/70 lg:mb-16 sm:text-xl">Experience. Commitment. Results.</p>
                 </div>
-                <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+                <div class="grid gap-5 mb-6 lg:mb-12 md:grid-cols-2">
                      <!-- Tech Exp -->
-                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400 shrink-0">
-                            <i data-lucide="monitor-check" class="w-8 h-8"></i>
+                     <div class="soft-panel p-7 rounded-md reveal flex items-start gap-4">
+                        <div class="h-16 w-16 text-brand-green flex items-center justify-center shrink-0">
+                            <i data-lucide="monitor-check" class="w-10 h-10 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Decades of Tech Experience</h3>
-                            <p class="text-gray-400">We bring deep technical expertise to the table, ensuring robust and scalable solutions.</p>
+                            <h3 class="text-xl font-display font-semibold text-brand-green mb-2">Decades of Tech Experience</h3>
+                            <p class="text-brand-ink/75">We bring deep technical expertise to the table, ensuring robust and scalable solutions.</p>
                         </div>
                      </div>
                      <!-- AI Exp -->
-                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                        <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400 shrink-0">
-                            <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                     <div class="soft-panel p-7 rounded-md reveal flex items-start gap-4">
+                        <div class="h-16 w-16 text-brand-green flex items-center justify-center shrink-0">
+                            <i data-lucide="brain-circuit" class="w-10 h-10 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Years of AI Experience</h3>
-                            <p class="text-gray-400">We've been working with AI before the hype, understanding practical applications over buzzwords.</p>
+                            <h3 class="text-xl font-display font-semibold text-brand-green mb-2">Years of AI Experience</h3>
+                            <p class="text-brand-ink/75">We've been working with AI before the hype, understanding practical applications over buzzwords.</p>
                         </div>
                      </div>
                      <!-- Needs -->
-                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                         <div class="p-3 bg-pink-500/10 rounded-lg text-pink-400 shrink-0">
-                            <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                     <div class="soft-panel p-7 rounded-md reveal flex items-start gap-4">
+                         <div class="h-16 w-16 text-brand-green flex items-center justify-center shrink-0">
+                            <i data-lucide="heart-handshake" class="w-10 h-10 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Committed to You</h3>
-                            <p class="text-gray-400">We are committed to understanding your specific needs. No cookie-cutter solutions.</p>
+                            <h3 class="text-xl font-display font-semibold text-brand-green mb-2">Committed to You</h3>
+                            <p class="text-brand-ink/75">We are committed to understanding your specific needs. No cookie-cutter solutions.</p>
                         </div>
                      </div>
                      <!-- ROI Guarantee -->
-                     <div class="glass p-8 rounded-2xl reveal flex items-start gap-4">
-                         <div class="p-3 bg-green-500/10 rounded-lg text-green-400 shrink-0">
-                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                     <div class="soft-panel p-7 rounded-md reveal flex items-start gap-4">
+                         <div class="h-16 w-16 text-brand-green flex items-center justify-center shrink-0">
+                            <i data-lucide="shield-check" class="w-10 h-10 line-icon"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Risk-Free Guarantee</h3>
-                            <p class="text-gray-400">Don't pay anything if gains are not realized for your business. We stand by our results.</p>
+                            <h3 class="text-xl font-display font-semibold text-brand-green mb-2">Risk-Free Guarantee</h3>
+                            <p class="text-brand-ink/75">Don't pay anything if gains are not realized for your business. We stand by our results.</p>
                         </div>
                      </div>
                 </div>
@@ -356,84 +378,84 @@
         </section>
 
         <!-- Process Section -->
-        <section id="process" class="py-24 bg-[#0B0F19]">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
+        <section id="process" class="py-20">
+            <div class="py-8 px-6 mx-auto max-w-6xl">
                 <div class="text-center mb-16 reveal">
-                    <h2 class="text-4xl font-extrabold text-white">How It Works</h2>
+                    <h2 class="text-4xl font-display font-semibold text-brand-ink">How It Works</h2>
                 </div>
                 
                 <div class="grid gap-8 md:grid-cols-4 text-center">
                     <!-- Step 1 -->
                     <div class="reveal">
-                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">1</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Discover</h3>
-                        <p class="text-gray-400 text-sm">30-min chat to find your pain points.</p>
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center text-brand-ink mb-4"><i data-lucide="search" class="w-12 h-12 line-icon"></i></div>
+                        <h3 class="text-xl font-display font-semibold text-brand-ink mb-2">Discover</h3>
+                        <p class="text-brand-ink/70 text-sm">30-min chat to find your pain points.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="reveal">
-                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">2</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Audit & Plan</h3>
-                        <p class="text-gray-400 text-sm">We identify high-impact wins.</p>
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center text-brand-ink mb-4"><i data-lucide="clipboard-list" class="w-12 h-12 line-icon"></i></div>
+                        <h3 class="text-xl font-display font-semibold text-brand-ink mb-2">Audit & Plan</h3>
+                        <p class="text-brand-ink/70 text-sm">We identify high-impact wins.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="reveal">
-                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">3</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Build</h3>
-                        <p class="text-gray-400 text-sm">We implement while you keep working.</p>
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center text-brand-ink mb-4"><i data-lucide="settings" class="w-12 h-12 line-icon"></i></div>
+                        <h3 class="text-xl font-display font-semibold text-brand-ink mb-2">Build</h3>
+                        <p class="text-brand-ink/70 text-sm">We implement while you keep working.</p>
                     </div>
                     <!-- Step 4 -->
                     <div class="reveal">
-                        <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center text-2xl font-bold text-white border border-gray-700 mb-4 shadow-[0_0_10px_rgba(255,255,255,0.1)]">4</div>
-                        <h3 class="text-xl font-bold text-white mb-2">Train</h3>
-                        <p class="text-gray-400 text-sm">We teach your team the ropes.</p>
+                        <div class="w-16 h-16 mx-auto flex items-center justify-center text-brand-ink mb-4"><i data-lucide="presentation" class="w-12 h-12 line-icon"></i></div>
+                        <h3 class="text-xl font-display font-semibold text-brand-ink mb-2">Train</h3>
+                        <p class="text-brand-ink/70 text-sm">We teach your team the ropes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer CTA & Contact -->
-        <section id="contact" class="bg-gradient-to-b from-[#0B0F19] to-blue-900/20 py-24 border-t border-white/5">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-                <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Ready to future-proof your business?</h2>
-                <p class="mb-8 text-lg font-normal text-gray-400 lg:text-xl sm:px-16 xl:px-48">
+        <section id="contact" class="bg-brand-linen/70 py-20 border-t border-brand-navy/10">
+            <div class="py-8 px-6 mx-auto max-w-6xl text-center lg:py-12">
+                <h2 class="mb-4 text-4xl font-display font-semibold leading-tight text-brand-ink md:text-5xl">Ready to future-proof your business?</h2>
+                <p class="mb-8 text-lg font-normal text-brand-ink/70 lg:text-xl sm:px-16 xl:px-48">
                     Send us a message to get started, or book a call directly below.
                 </p>
 
                 <!-- Tally Form -->
-                <div class="max-w-3xl mx-auto rounded-xl overflow-hidden mb-12">
+                <div class="max-w-3xl mx-auto rounded-md overflow-hidden mb-12 soft-panel">
                     <iframe data-tally-src="https://tally.so/embed/7R2rNR?hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="492" frameborder="0" marginheight="0" marginwidth="0" title="Attain AI Labs interest form"></iframe>
                     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
                 </div>
 
                 <div class="flex flex-col mt-16 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                    <h3 class="text-2xl font-bold text-white bg-transparent flex items-center justify-center gap-2">
+                    <h3 class="text-2xl font-display font-semibold text-brand-ink bg-transparent flex items-center justify-center gap-2">
                         Or Book a Discovery Call
-                        <i data-lucide="calendar" class="w-6 h-6 text-blue-500"></i>
+                        <i data-lucide="calendar" class="w-6 h-6 text-brand-green line-icon"></i>
                     </h3>
                 </div>
                 
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget max-w-4xl mx-auto" data-url="https://calendly.com/attainailabs/30min?background_color=1a1a1a&text_color=ffffff&primary_color=3B82F6" style="min-width:320px;height:700px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
+ <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/attainailabs/30min?hide_event_type_details=1" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
             </div>
         </section>
     </main>
 
     <!-- Semantic Footer -->
-    <footer class="bg-[#0B0F19] border-t border-white/10 pt-12 pb-8 px-4">
-        <div class="max-w-screen-xl mx-auto text-center">
+    <footer class="bg-brand-linen border-t border-brand-navy/10 pt-12 pb-8 px-6">
+        <div class="max-w-6xl mx-auto text-center">
             <!-- Note: Local SEO text has been intentionally removed to prevent hidden text penalties, relying solely on Schema Markup -->
             <div class="mb-6">
-                <a href="mailto:info@attainAILabs.com" class="text-gray-400 hover:text-white transition-colors flex items-center justify-center gap-2 text-sm font-medium">
-                    <i data-lucide="mail" class="w-4 h-4"></i> info@attainAILabs.com
+                <a href="mailto:info@attainAILabs.com" class="text-brand-ink/70 hover:text-brand-green transition-colors flex items-center justify-center gap-2 text-sm font-medium">
+                    <i data-lucide="mail" class="w-4 h-4 line-icon"></i> info@attainAILabs.com
                 </a>
             </div>
             
-            <div class="text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div class="text-sm text-brand-ink/55 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <span>© 2026 Attain AI Labs. All Rights Reserved.</span>
-                <span class="hidden sm:inline-block text-gray-700">|</span> 
-                <button onclick="togglePrivacy()" class="hover:text-white transition-colors underline min-h-[44px] min-w-[44px] px-3 py-2 flex items-center justify-center">Privacy Policy</button>
+                <span class="hidden sm:inline-block text-brand-ink/30">|</span> 
+                <button onclick="togglePrivacy()" class="hover:text-brand-green transition-colors underline min-h-[44px] min-w-[44px] px-3 py-2 flex items-center justify-center">Privacy Policy</button>
             </div>
         </div>
     </footer>
@@ -442,16 +464,16 @@
     <div id="privacy-modal" class="fixed inset-0 z-[100] hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <!-- Backdrop -->
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            <div class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" aria-hidden="true" onclick="togglePrivacy()"></div>
+            <div class="fixed inset-0 bg-brand-navy bg-opacity-75 transition-opacity" aria-hidden="true" onclick="togglePrivacy()"></div>
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
             
             <!-- Modal Panel -->
-            <div class="inline-block align-bottom bg-[#111625] border border-white/10 rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="inline-block align-bottom bg-brand-cream border border-brand-navy/10 rounded-md text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 <div class="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="sm:flex sm:items-start">
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
-                            <h3 class="text-lg leading-6 font-medium text-white mb-4" id="modal-title">Privacy Policy</h3>
-                            <div class="mt-2 text-sm text-gray-300 space-y-3 h-64 overflow-y-auto pr-2 custom-scrollbar">
+                            <h3 class="text-lg leading-6 font-display font-semibold text-brand-ink mb-4" id="modal-title">Privacy Policy</h3>
+                            <div class="mt-2 text-sm text-brand-ink/75 space-y-3 h-64 overflow-y-auto pr-2 custom-scrollbar">
                                 <p><strong>Last Updated: February 2026</strong></p>
                                 <p>At Attain AI Labs, we respect your privacy. This policy explains how we handle your information.</p>
                                 
@@ -476,8 +498,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#0B0F19] px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse border-t border-white/5">
-                    <button type="button" id="close-modal-btn" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm min-h-[44px]" onclick="togglePrivacy()">
+                <div class="bg-brand-linen px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse border-t border-brand-navy/10">
+                    <button type="button" id="close-modal-btn" class="btn-primary w-full inline-flex justify-center border border-transparent shadow-sm px-4 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green sm:ml-3 sm:w-auto sm:text-sm min-h-[44px]" onclick="togglePrivacy()">
                         Close
                     </button>
                 </div>
