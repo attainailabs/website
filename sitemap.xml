@@ -15,4 +15,12 @@
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
+
+   <!-- Wundertale Waitlist Page -->
+   <url>
+      <loc>https://www.attainailabs.com/wundertale/</loc>
+      <lastmod>2026-05-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>
