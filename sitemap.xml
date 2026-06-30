@@ -23,4 +23,20 @@
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
+
+   <!-- MyWunderTale Waitlist Page -->
+   <url>
+      <loc>https://www.attainailabs.com/MyWunderTale/</loc>
+      <lastmod>2026-06-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- MyWunderTale App Privacy Policy -->
+   <url>
+      <loc>https://www.attainailabs.com/MyWunderTale/privacy-policy.html</loc>
+      <lastmod>2026-06-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
 </urlset>

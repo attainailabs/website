@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - MyWunderTale</title>
+  <meta name="description" content="Privacy Policy for MyWunderTale app. MyWunderTale is designed privacy-first: all child details, names, and profiles remain locally on your device.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Attain AI Labs">
+  <link rel="canonical" href="https://www.attainailabs.com/MyWunderTale/privacy-policy.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Privacy Policy - MyWunderTale">
+  <meta property="og:description" content="MyWunderTale is designed privacy-first: child details, names, and profiles remain locally on your device.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.attainailabs.com/MyWunderTale/privacy-policy.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Privacy Policy - MyWunderTale">
+  <meta name="twitter:description" content="MyWunderTale is designed privacy-first: child details, names, and profiles remain locally on your device.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: #f9f9ff;
+      --surface-container: #e8eeff;
+      --surface-container-high: #dfe8ff;
+      --surface-container-highest: #d7e2ff;
+      --surface-lowest: #ffffff;
+      --on-surface: #081b38;
+      --on-surface-variant: #3f484c;
+      --outline: #6f787d;
+      --primary: #0c6780;
+      --on-primary: #ffffff;
+      --shadow: rgba(8, 27, 56, 0.08);
+      --accent-soft: rgba(12, 103, 128, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--on-surface);
+      background: var(--background);
+      font-family: "Be Vietnam Pro", system-ui, sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 18px 0;
+      background: rgba(249, 249, 255, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(8, 27, 56, 0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(100% - 40px, 800px);
+      margin: 0 auto;
+    }
+
+    .brand {
+      color: var(--primary);
+      font-family: "Quicksand", system-ui, sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 150ms ease;
+    }
+
+    .brand:hover {
+      opacity: 0.85;
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border: 1px solid rgba(12, 103, 128, 0.2);
+      border-radius: 999px;
+      color: var(--primary);
+      background: transparent;
+      font-family: "Quicksand", system-ui, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 160ms ease;
+    }
+
+    .btn-home:hover {
+      background: var(--accent-soft);
+      border-color: var(--primary);
+    }
+
+    .content-wrapper {
+      flex: 1;
+      width: min(100% - 40px, 800px);
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .policy-card {
+      padding: clamp(24px, 6vw, 48px);
+      border-radius: 32px;
+      background: var(--surface-lowest);
+      box-shadow: 0 12px 32px var(--shadow);
+    }
+
+    .updated-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--surface-container-high);
+      color: var(--primary);
+      font-family: "Quicksand", system-ui, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      color: var(--primary);
+      font-family: "Quicksand", system-ui, sans-serif;
+      font-size: clamp(2.2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .intro-paragraph {
+      font-size: 1.12rem;
+      line-height: 1.75;
+      color: var(--on-surface);
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin: 40px 0 16px;
+      color: var(--primary);
+      font-family: "Quicksand", system-ui, sans-serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.25;
+      border-bottom: 2px solid var(--surface-container);
+      padding-bottom: 8px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--on-surface-variant);
+      font-size: 0.98rem;
+    }
+
+    ul {
+      margin: 0 0 24px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 12px;
+      color: var(--on-surface-variant);
+      font-size: 0.98rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed var(--primary);
+      transition: all 150ms ease;
+    }
+
+    a:hover {
+      border-bottom-style: solid;
+      background: var(--accent-soft);
+    }
+
+    .footer {
+      padding: 24px 0;
+      background: var(--surface-container);
+      border-top: 1px solid rgba(8, 27, 56, 0.05);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(100% - 40px, 800px);
+      margin: 0 auto;
+    }
+
+    .copyright {
+      margin: 0;
+      color: var(--on-surface-variant);
+      font-size: 0.82rem;
+    }
+
+    .footer-brand {
+      color: var(--primary);
+      font-family: "Quicksand", system-ui, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+      }
+      .content-wrapper {
+        padding-top: 36px;
+      }
+      .policy-card {
+        padding: 24px 20px;
+        border-radius: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="/MyWunderTale/">MyWunderTale</a>
+        <a class="btn-home" href="/MyWunderTale/">Back to Website</a>
+      </div>
+    </nav>
+
+    <main class="content-wrapper">
+      <article class="policy-card">
+        <span class="updated-label">Last updated: June 28, 2026</span>
+        <h1>Privacy Policy</h1>
+        
+        <p class="intro-paragraph">MyWunderTale is designed privacy-first. Your child's name, age, and all personal details stay on your device. We do not collect analytics, crash reports, or any personal information. This policy explains exactly what the app does and does not do with data.</p>
+
+        <h2>What stays on your device</h2>
+        <p>MyWunderTale stores the following information locally on your device only. None of it is sent to us or any third party:</p>
+        <ul>
+          <li>Child profiles (names, ages, genders, phonetic pronunciations)</li>
+          <li>Story preferences and selected themes</li>
+          <li>Play history and favorites</li>
+          <li>Custom pronunciation entries</li>
+          <li>App settings and preferences</li>
+        </ul>
+        <p>This data exists only to personalize stories for your family. It is never uploaded, shared, or backed up by us. If you delete the app, all of this data is removed.</p>
+
+        <h2>Network activity</h2>
+        <p>MyWunderTale is designed to work fully offline after one-time voice setup. The only network activity is:</p>
+        <ul>
+          <li><strong>Voice setup fallback:</strong> The narration model is normally included with the app. If the included voice files are unavailable or cannot be prepared, the app may download the model from our GitHub release page. Your device's IP address is visible to GitHub as part of a standard download request. No personal information is included.</li>
+          <li><strong>Content updates:</strong> Periodically, the app checks for new stories and important notices from our servers. These requests contain no personal information — only the app version and a timestamp.</li>
+          <li><strong>Feedback submissions:</strong> When you voluntarily submit feedback using the in-app feedback form, the app sends the following to a secure MyWunderTale server: your device platform (iOS or Android), the app version, an internal story identifier (a code name such as "the_magic_forest" — not your child's name), your thumbs-up or thumbs-down ratings, and any optional text you type. The parental gate (a simple maths check) must be passed before any submission can be made, ensuring a parent or guardian is always in control. No child names, ages, genders, or profiles are included.</li>
+        </ul>
+        <p>No personal information is ever transmitted during any network request.</p>
+
+        <h2>What we do not collect</h2>
+        <p>We do not collect, store, or process:</p>
+        <ul>
+          <li>Child names, ages, genders, or any profile information</li>
+          <li>Story text, audio content, or narration output</li>
+          <li>Usage analytics or behavioral data</li>
+          <li>Crash reports or diagnostic data</li>
+          <li>Device identifiers, advertising IDs, or persistent identifiers</li>
+          <li>Location data</li>
+        </ul>
+        <p>We have no analytics SDK, no crash reporting SDK, and no advertising SDK integrated in this app.</p>
+
+        <h2>Children's privacy (COPPA)</h2>
+        <p>MyWunderTale is intended for use by children under the supervision of a parent or guardian. We do not knowingly collect personal information from children. All child profile information entered in the app remains on the device and is never transmitted to us. This design means our app does not require verifiable parental consent under COPPA for data collection, because we collect no data.</p>
+
+        <h2>Feedback</h2>
+        <p>MyWunderTale provides two ways to share feedback:</p>
+        <p><strong>In-app feedback form:</strong> Tapping the feedback button opens a form — accessible only after passing a parental gate — where you can rate the app, a story, the narration, and name pronunciation, and add an optional comment. When submitted, the following is sent to the MyWunderTale team: your device platform, the app version, an internal story code name, your ratings, and the optional text you typed. No child names, ages, genders, or any personal information are included. Please do not type your child's name or any sensitive personal details into the comment field.</p>
+        <p><strong>Email:</strong> If you contact us at <a href="mailto:info@attainAILabs.com">info@attainAILabs.com</a>, we may receive your email address and the content of your message. Please do not include your child's name or sensitive personal details in emails.</p>
+
+        <h2>Data sharing</h2>
+        <p>We do not sell personal information. We do not share personal information with third parties. We do not use advertising networks or cross-app tracking.</p>
+
+        <h2>Your choices</h2>
+        <p>Because all personal data is stored only on your device, you have full control. You can edit or delete child profiles at any time in Settings. Uninstalling the app removes all locally stored data permanently.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions or requests, contact the MyWunderTale team at <a href="mailto:info@attainAILabs.com">info@attainAILabs.com</a>.</p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="/MyWunderTale/">MyWunderTale</a>
+        <p class="copyright">&copy; 2026 Attain AI Labs LLC. MyWunderTale is a product of Attain AI Labs LLC. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
