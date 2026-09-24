@@ -1,5 +1,7 @@
 {
   "scripts": {
+    "dev": "tailwindcss -c tailwind.config.js -i ./src/tailwind.css -o ./assets/site.css --watch",
+    "watch:css": "tailwindcss -c tailwind.config.js -i ./src/tailwind.css -o ./assets/site.css --watch",
     "build:css": "tailwindcss -c tailwind.config.js -i ./src/tailwind.css -o ./assets/site.css --minify"
   },
   "devDependencies": {

@@ -1,32 +1,74 @@
-# Attain AI Labs
+# AttainAILabs (Attain AI Labs)
 
-> Practical AI solutions, workflow automation, and custom AI tools for small businesses.
+> We solve problems worth solving. AttainAILabs (Attain AI Labs, Inc.) builds technology products and solutions for businesses and consumers — starting with real problems and using AI and modern software where they can create a meaningfully better answer.
 
-## About Us
+## About AttainAILabs
 
-Attain AI Labs bridges the gap between complex AI technology and daily business reality. We help small businesses automate tasks, cut costs, and unlock revenue with tailored, practical AI solutions.
+AttainAILabs (Attain AI Labs) is an AI product development and innovation laboratory. Rather than starting with hyped technology and looking for applications, we start with enduring human and business problems and apply AI and modern software development only where they create a distinctly superior outcome.
 
-We proudly serve small businesses in the Greater Seattle Area, including Seattle, Bellevue, Redmond, Kirkland, Sammamish, Issaquah, and throughout Washington State. We also serve small businesses nationwide in the USA and globally.
+Founded by Sidharth Sehgal (Ex-Meta, Ex-Amazon, Ex-Microsoft), AttainAILabs operates across two primary arenas powered by the same engineering discipline:
+1. **Business Arena**: Eliminating operational friction and software clutter for small and medium-sized businesses.
+2. **Consumer Arena**: Building trustworthy, delightful consumer experiences where personal privacy is strictly safeguarded.
 
+Headquartered in the Greater Seattle Area (serving Seattle, Bellevue, Redmond, Kirkland, Sammamish, Issaquah, and Washington State), AttainAILabs serves businesses and consumers nationwide across the United States and globally.
 
-## Core Services
+---
 
-* **Operational AI Audit**: We analyze workflows to identify exactly where AI can save money or time with data-driven insights.
+## Flagship Products & Arenas
 
-* **Strategic Consultancy**: Guidance to help businesses navigate the AI landscape, choose the right tools, and avoid expensive mistakes.
+### 1. Business Arena: attainDesk
+* **Product**: attainDesk (Live Alpha v0.6)
+* **Website**: https://attaindesk.com
+* **Purpose**: A simplified marketing and operations engine built for the realities of modern SMBs.
+* **Key Capabilities**: Unifies content synthesis, local keyword opportunities, and smart inquiry dispatch into an uncluttered operating layer.
+* **Philosophy**: "Less time managing tools. More time running the business."
 
-* **Solutions Implementation**: We build it for you. From intelligent chatbots to complex, automated CRM workflows, we handle the technical heavy lifting.
+### 2. Bespoke Business Engineering
+* Alongside proprietary software, Attain AI Labs partners directly with select businesses to design and deploy custom AI implementations around high-value problems that off-the-shelf software cannot solve.
+* **4-Stage Delivery**: Friction Identification -> Domain Architecture Audit -> Custom Software/AI Build -> Concrete Impact & Outcomes.
 
-* **Custom AI Tooling**: We build bespoke AI solutions and intelligent agents designed specifically for niche business needs when off-the-shelf software isn't enough.
+### 3. Consumer Arena: MyWunderTale
+* **Product**: MyWunderTale
+* **Website**: https://www.attainailabs.com/MyWunderTale/
+* **Purpose**: Personalized audio bedtime stories for children designed from the ground up around strict privacy.
+* **Key Capabilities**: Children as protagonists, adaptive audio pacing, works 100% offline, and zero cloud storage of sensitive telemetry or voice data.
+* **Philosophy**: "Personalization shouldn't require giving away the details that make it personal."
+
+### 4. Consumer Exploration: Loomee Firefly Lab
+* An exploratory laboratory bridging tactile toys and emerging AI technology into safe, screen-free interactive imagination for children and families.
+
+---
+
+## Operating Methodology (5-Step Discipline Framework)
+
+1. **Find Friction**: Is this a problem actually worth solving? Identify waste, bottlenecks, or unmet human needs.
+2. **Understand Better**: Study user behavior, root workflows, and deep behavioral intent.
+3. **Choose Tech**: Determine the cleanest combination of AI, cloud software, or pure on-device runtime.
+4. **Build Quickly**: Turn validated concepts into reliable, production-ready code.
+5. **Learn From Use**: Let actual human behavior guide scale rather than hype.
+
+---
+
+## Key Leadership
+
+* **Sidharth Sehgal** — Founder & Principal Technologist
+  * Prior Experience: Meta, Amazon, Microsoft
+  * Focus: Software engineering, scalable distributed systems, product strategy, and consumer trust.
+
+---
 
 ## Important Links
 
-* [Attain AI Labs Home](https://www.attainailabs.com/)
+* [Attain AI Labs Homepage](https://www.attainailabs.com/)
+* [attainDesk (Business Marketing & Operations)](https://attaindesk.com)
+* [MyWunderTale (Privacy-First Kids Audio Stories)](https://www.attainailabs.com/MyWunderTale/)
+* [MyWunderTale Privacy Policy](https://www.attainailabs.com/MyWunderTale/privacy-policy.html)
+* [SMB Suite Waitlist](https://www.attainailabs.com/BizCenterWaitlist.html)
+* [XML Sitemap](https://www.attainailabs.com/sitemap.xml)
 
-* [AI Products Waitlist for Small Businesses](https://www.google.com/search?q=https://www.attainailabs.com/BizCenterWaitlist.html)
+---
 
-* [MyWunderTale Personalized Kids Story App Waitlist](https://www.attainailabs.com/MyWunderTale/) - Early access signup for parents and guardians interested in personalized, age-appropriate kids stories where their child can become the hero.
+## Contact & Inquiries
 
-## Contact Information
-
-* Email: info@attainAILabs.com
+* **General & Partnership Inquiries**: info@attainAILabs.com
+* **Website**: https://www.attainailabs.com
